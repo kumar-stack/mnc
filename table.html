@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+     
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <style>
+      .carousel {
+        position: relative;
+        margin: 2.5rem;
+        padding-inline: 15px;
+        border-radius: 10px;
+      }
+      .carousel img {
+        width: 100%;
+        object-fit: cover;
+        height: 416px;
+      }
+      .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+    </style>
+    <style>
+      .pdf_block {
+        width: 50%;
+      }
+      /* .wd {
+        width: 50%;
+    } */
+    iframe {
+      border: 0;
+      width: 100%;
+      min-height: 29rem;
+      height: 100%;
+  }
+  .navbar{
+    padding-inline: 1rem;
+    padding-block: 1rem;
+  }
+    .xyz {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        height: 51rem;
+      }
+      .xyz ul {
+        flex-direction: column;
+        width: 15%;
+       background: #add8e6a3;
+        height: 91dvh;
+        position: relative;
+      }
+      .tab-content {
+        width: 58%;
+      }
+      #pp {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%; 
+      }
+      p{
+        position: absolute;
+        text-align: center;
+        left: 50%;
+    }
+    .brdr_ryt{
+      border-right: 1px solid black;
+    }
+    .frm{
+      padding: 15px;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      margin: 15px 10px;
+      box-shadow: 1px 1px 5px 2px #eee;
+      width: 50rem;
+    }
+    .tbl{
+      margin-bottom: 3rem;
+      margin-right: 3rem;
+      border: 1px solid #eee;
+      box-shadow: 1px 1px 6px 3px #eee;
+      border-radius: 10px;
+      padding: 15px;
+    }
+    /***resizer****/
+    .resizable {
+        height: 303px;
+        width: 800px;
+        overflow: auto;
+        float: left;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .resizer {
+       
+        height: 10px;
+        background: black;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        cursor: nwse-resize;
+      }
+      .rt .resizer {
+        border: none;
+        left: 0;
+       
+      }
+      .rt .resizer-horizontal{
+        display: none;
+      }
+      .resizer-horizontal {
+        width: 10px;
+        height: 100%;
+        top: 0;
+        right: -5px; /* Half the width of the resizer */
+        cursor: ew-resize;
+      }
+
+      .resizer-vertical {
+        width: 100%;
+        height: 10px;
+        left: 0;
+        bottom: -5px; /* Half the height of the resizer */
+        cursor: ns-resize;
+      }
+      .btm{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #add8e6a3;
+        width: 100%;
+        margin: 0;
+        padding-block: 1rem;
+      }
+      .lt,.rt{
+        position: relative; 
+      }
+      
+      .rtbtn{
+        position: absolute;
+        right: 2px;
+        padding: 10px;
+        border-radius: 20px;
+        z-index: 2;
+        top: 2rem;
+        background: black;
+        color: white;
+        cursor: pointer;
+      }
+      .lftbtn{
+        position: absolute;
+        padding: 10px;
+        border-radius: 20px;
+        z-index: 2;
+        top: 5rem;
+        background: black;
+        color: white;
+        cursor: pointer;
+        right: 100.2%;
+      }
+      .wt{
+        width: 10px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <nav class="navbar bg-light
+      <div class="container-fluid">
+        <a class="navbar-brand">Navbar</a>
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="xyz">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" href="#pp" data-bs-toggle="tab">first</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#kl" data-bs-toggle="tab">second</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#nm" data-bs-toggle="tab">third</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="pp" class="tab-pane fade in ">
+          
+          <div class="container-fluid d-flex  flex-nowrap ">
+            <div class="d-flex flex-column p-2 wd lt"  >
+              <i class="fa-solid fa-angles-right rtbtn"></i>
+            <div class="resizable" id="resizable1">
+               
+              <div class="table-responsive tbl">
+                <table class="table table-striped responsive">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td colspan="2">Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td colspan="2">Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="1.jpg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="2.jpg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="3.jpg" alt="" />
+              </div>
+          
+            </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+              
+            </div> 
+
+            <div class="d-flex flex-column p-2 wd rt ">
+              <i class="fa-solid fa-angles-left lftbtn"></i>
+              <div class="resizable" id="resizable2">
+            <iframe  src="./pdf1.pdf" frameborder="0"></iframe>
+          </div>
+              <form class="frm">
+                <div class="mb-3">
+                  <label for="exampleInputname1" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    aria-describedby="nameHelp"
+                  />
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                  />
+                  
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                  />
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div id="kl" class="tab-pane fade in show "><p>2nd slide</p></div>
+        <div id="nm" class="tab-pane fade in show"><p>3rd slide</p></div>
+
+      </div>
+    </div>
+    <footer><p class="btm">footer section</p></footer>
+     <script>
+      const lftbtn = document.querySelector('.lftbtn')
+      const rtbtn = document.querySelector('.rtbtn')
+      const tbcntnt = document.querySelector('.tab-content')
+      const rz = document.querySelector('.resizable')
+      const lt = document.querySelector('.lt')
+      const rt = document.querySelector('.rt')
+      const frm = document.querySelector('.frm')
+
+      let cc = 1
+
+      lftbtn.addEventListener('click',function(){
+        lt.style.width = '5px';
+        tbcntnt.style.width = '100%';
+        rz.style.width = '100%';
+        rt.style.width = '100%';
+        frm.style.width='100%';
+      })
+      rtbtn.addEventListener('click',function(){
+        lt.style.width = '48%'
+        tbcntnt.style.width = '100%'
+        rz.style.width = '800px'
+        rt.style.width = '50%'
+      })
+      
+      function makeResizableDiv(div) {
+        const element = document.getElementById(div);
+        const resizerHorizontal = document.createElement("div");
+        const resizerVertical = document.createElement("div");
+
+        resizerHorizontal.className = "resizer resizer-horizontal";
+        resizerVertical.className = "resizer resizer-vertical";
+
+        element.appendChild(resizerHorizontal);
+        element.appendChild(resizerVertical);
+
+        resizerHorizontal.addEventListener("mousedown", function (e) {
+          e.preventDefault();
+          window.addEventListener("mousemove", resizeWidth);
+          window.addEventListener("mouseup", stopResize);
+        });
+
+        resizerVertical.addEventListener("mousedown", function (e) {
+          e.preventDefault();
+          window.addEventListener("mousemove", resizeHeight);
+          window.addEventListener("mouseup", stopResize);
+        });
+
+        function resizeWidth(e) {
+          element.style.width =
+            e.clientX - element.getBoundingClientRect().left + "px";
+        }
+
+        function resizeHeight(e) {
+          element.style.height =
+            e.clientY - element.getBoundingClientRect().top + "px";
+        }
+
+        function stopResize() {
+          window.removeEventListener("mousemove", resizeWidth);
+          window.removeEventListener("mousemove", resizeHeight);
+        }
+      }
+
+      makeResizableDiv("resizable1");
+      makeResizableDiv("resizable2");
+      makeResizableDiv("resizable3");
+    </script>
+  </body>
+</html>
